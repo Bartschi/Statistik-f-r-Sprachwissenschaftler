@@ -1,6 +1,7 @@
 # Hausaufgabe 03
 # Isabelle Bartsch <bartschi@students.uni-marburg.de>
 # 2014-04-26
+
 # Dieses Werk ist lizenziert unter einer CC-BY-NC-SA Lizenz.
 
 # Sie sollten die Datei auch in Ihren Ordner kopieren und einen Commit machen, 
@@ -11,8 +12,6 @@
 # für den Umgang mit viel Code.
 
 # In R können wir den arithmetischen Mittelwert sehr leicht mit mean()
-# berechnen.
-
 my.data <- c(1,9,7,3)
 print(mean(my.data))
 [1] 5
@@ -62,6 +61,7 @@ print(sqrt(my.data))
 
 # Exponenten mit **
 print(my.data**3)
+[1]   1 729 343  27
 
 # Logarithmen
 # print(log(my.data))
@@ -94,7 +94,6 @@ m  w
 # with xtabs()
 # die komische Syntax mit Tilde wird später deutlicher ....
 # print(xtabs(~more.data))
-more.data
 m  w 
 6 11 
 
@@ -139,7 +138,7 @@ w  m
 # modus <- (tabelle.sorted[1])
 # print(modus)
 w 
-11 
+11
 
 # Verständisfrage: gibt es immer nur *einen* Modalwert? 
 # Wenn nicht, ist der Code oben korrekt? Warum?
@@ -152,7 +151,7 @@ w
 # Bei 2 Elementen mit dem gleichen Wert, kann allerdings keine derartige Reihenfolge gemacht
 # werden.
 
-# Als Abscheid ein Beispiel mit der Darstellung Frequenzdaten mit Säulendiagramm
+# Als Abschied ein Beispiel mit der Darstellung Frequenzdaten mit Säulendiagramm
 # bzw. Histogramm
 
 # library(ggplot2)
