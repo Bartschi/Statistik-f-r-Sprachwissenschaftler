@@ -10,11 +10,12 @@
 # stellen) muss. Das ist zwar Umständlicher für Beschreibungstext, aber schöner 
 # für den Umgang mit viel Code.
 
-# In R können wir sehr den arithmetischen Mittelwert sehr leicht mit mean()
+# In R können wir den arithmetischen Mittelwert sehr leicht mit mean()
 # berechnen.
 
 my.data <- c(1,9,7,3)
 print(mean(my.data))
+[1] 5
 
 # Führen Sie das Skript mit dem "Source"-Knopf aus. Bemerken Sie dabei, dass wir
 # hier print() nutzen müssen, damit das Ergebnis gedruck wird. Das ist anders als 
@@ -26,7 +27,7 @@ print(mean(my.data))
 # gibt in der Leiste mit "Source" auch einen kleinen Knopf, der so aussieht wie 
 # einen kleinen Notizblock (Notebook) aus. Ein weiteres Fenster öffnet sich mit 
 # schön formatiertem Output. Das ist schön, aber trotzdem sollten Sie wissen,
-# wie R-Output in seiner Bassiform aussieht UND wie man wirklich schönen Output
+# wie R-Output in seiner Basisform aussieht UND wie man wirklich schönen Output
 # mit Fließtext durch RMarkdown macht.
 
 # In R sind fast alle Daten Vektoren, sogar Einzelzahlen -- Einzelelemente sind
@@ -39,13 +40,16 @@ print(mean(my.data))
 # überschaubar war.)
 
 # print(my.data[3])
+[1] 7
 
 # Wenn wir eine Variable mit einer Zahl haben,
 # zahl <- 42
 # print(zahl)
+[1] 42
 
 # können wir auch sie indizieren (zwar nur mit [1]), weil es nur ein Element gibt
 # print(zahl[1])
+[1] 42
 
 # Diese starke Orientierung an Daten statt an Datenpunkte ist eine große Stärke
 # von R, die R von vielen anderen Programmiersprachen unterscheidet.
@@ -54,23 +58,28 @@ print(mean(my.data))
 
 # Quadratwurzel
 print(sqrt(my.data))
+[1] 1.000000 3.000000 2.645751 1.732051
 
 # Exponenten mit **
 print(my.data**3)
 
 # Logarithmen
 # print(log(my.data))
+[1] 0.000000 2.197225 1.945910 1.098612
 
 # Summe aller Elemente in einem Vektor
 # print(sum(my.data))
+[1] 20
 
 # Sortieren
 # print(sort(my.data))
+[1] 1 3 7
 
 # und vieles Mehr! 
 
 # Es gibt eine eingebaute Funktion für das Median:
 # print(median(my.data))
+[1] 5
 
 # aber nicht für den Modalwert!
 # Es gibt aber andere Funktionen, die uns da helfen.
@@ -78,30 +87,48 @@ print(my.data**3)
 
 # with table()
 # print(table(more.data))
+more.data
+m  w 
+6 11
 
 # with xtabs()
 # die komische Syntax mit Tilde wird später deutlicher ....
 # print(xtabs(~more.data))
+more.data
+m  w 
+6 11 
 
 # auch die Ergebnisse solcher Funktionen können wir einer Variabel zuweisen:
 # tabelle <- xtabs(~more.data)
 # print(tabelle)
+more.data
+m  w 
+6 11 
 
 # Wir können die Werte auch aus dieser Tabelle bearbeiten
 # total <- sum(tabelle)
 # print(total)
+[1] 17
 
 # und damit relative Häufigkeiten ausdrucken:
 # tabelle.rel <- tabelle / total
 # print(tabelle.rel)
+more.data
+m         w 
+0.3529412 0.6470588 
 
 # Vervollständigen Sie folgende Zeile, sodass Prozentwerte aus den relativen
-# Häufigkeiten entst ehen: tabelle.prozent <- tabelle.rel code_hier 
+# Häufigkeiten entst ehen: tabelle.prozent <- quantile(tabelle.rel) 
 # print(tabelle.prozent)
+0%       25%       50%       75%      100% 
+0.3529412 0.4264706 0.5000000 0.5735294 0.6470588 
 
 # Aber die Frage bleibt, wie berechnen wir den Modus? Durch sortieren!
 # tabelle.sorted <- sort(tabelle,decreasing=TRUE)
 # print(tabelle.sorted)
+more.data
+w  m 
+11  6 
 
 # Sie sehen hier, dass manche Funktionen weitere Optionen haben, die wir
 # bestimmen können. Hier wollten wir, dass die Liste mit dem größten Wert
@@ -109,13 +136,21 @@ print(my.data**3)
 
 # Nehmen Sie das erste Element aus dem obigen Ergebnis, um den Modalwert zu
 # bekommen:
-# modus <- code_hier
+# modus <- (tabelle.sorted[1])
+# print(modus)
+w 
+11 
 
 # Verständisfrage: gibt es immer nur *einen* Modalwert? 
 # Wenn nicht, ist der Code oben korrekt? Warum?
 # Schreiben Sie Ihre Antwort als Comment hier.
 
-# antwort_hier
+# # Es gibt nicht immer nur ein Modalwert, da dies ein der höchste Wert ist, der einer Variablen
+# zugeordnet werden kann. In unsere Fall ist der Modalwert "w", weil "w" 11 mal beobachtet werden
+# kann. Würde "m" allerdings auch 11 mal vorkommen, gäbe es 2 Modalwerte.
+# Demzufolge ist der Code oben nicht korrekt, da er die Werte in absteigender Reihenfolge sortiert.
+# Bei 2 Elementen mit dem gleichen Wert, kann allerdings keine derartige Reihenfolge gemacht
+# werden.
 
 # Als Abscheid ein Beispiel mit der Darstellung Frequenzdaten mit Säulendiagramm
 # bzw. Histogramm
