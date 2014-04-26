@@ -1,7 +1,6 @@
 # Hausaufgabe 03
 # Isabelle Bartsch <bartschi@students.uni-marburg.de>
 # 2014-04-26
-
 # Dieses Werk ist lizenziert unter einer CC-BY-NC-SA Lizenz.
 
 # Sie sollten die Datei auch in Ihren Ordner kopieren und einen Commit machen, 
@@ -11,7 +10,9 @@
 # stellen) muss. Das ist zwar Umständlicher für Beschreibungstext, aber schöner 
 # für den Umgang mit viel Code.
 
-# In R können wir den arithmetischen Mittelwert sehr leicht mit mean()
+# In R können wir sehr den arithmetischen Mittelwert sehr leicht mit mean()
+# berechnen.
+
 my.data <- c(1,9,7,3)
 print(mean(my.data))
 
@@ -25,7 +26,7 @@ print(mean(my.data))
 # gibt in der Leiste mit "Source" auch einen kleinen Knopf, der so aussieht wie 
 # einen kleinen Notizblock (Notebook) aus. Ein weiteres Fenster öffnet sich mit 
 # schön formatiertem Output. Das ist schön, aber trotzdem sollten Sie wissen,
-# wie R-Output in seiner Basisform aussieht UND wie man wirklich schönen Output
+# wie R-Output in seiner Bassiform aussieht UND wie man wirklich schönen Output
 # mit Fließtext durch RMarkdown macht.
 
 # In R sind fast alle Daten Vektoren, sogar Einzelzahlen -- Einzelelemente sind
@@ -43,7 +44,6 @@ print(my.data[3])
 zahl <- 42
 print(zahl)
 
-
 # können wir auch sie indizieren (zwar nur mit [1]), weil es nur ein Element gibt
 print(zahl[1])
 
@@ -58,24 +58,19 @@ print(sqrt(my.data))
 # Exponenten mit **
 print(my.data**3)
 
-
 # Logarithmen
 print(log(my.data))
-
 
 # Summe aller Elemente in einem Vektor
 print(sum(my.data))
 
-
 # Sortieren
 print(sort(my.data))
-
 
 # und vieles Mehr! 
 
 # Es gibt eine eingebaute Funktion für das Median:
 print(median(my.data))
-
 
 # aber nicht für den Modalwert!
 # Es gibt aber andere Funktionen, die uns da helfen.
@@ -83,7 +78,6 @@ more.data <- c("m","m","w","w","m","w","w","w","w","w","w","m","m","m","w","w","
 
 # with table()
 print(table(more.data))
-
 
 # with xtabs()
 # die komische Syntax mit Tilde wird später deutlicher ....
@@ -101,16 +95,14 @@ print(total)
 tabelle.rel <- tabelle / total
 print(tabelle.rel)
 
-
 # Vervollständigen Sie folgende Zeile, sodass Prozentwerte aus den relativen
-#Häufigkeiten entstehen:
-tabelle.prozent <- quantile(tabelle.rel) 
+# Häufigkeiten entstehen: 
+tabelle.prozent <- quantile(tabelle.rel)
 print(tabelle.prozent)
 
 # Aber die Frage bleibt, wie berechnen wir den Modus? Durch sortieren!
 tabelle.sorted <- sort(tabelle,decreasing=TRUE)
 print(tabelle.sorted)
-
 
 # Sie sehen hier, dass manche Funktionen weitere Optionen haben, die wir
 # bestimmen können. Hier wollten wir, dass die Liste mit dem größten Wert
@@ -119,7 +111,6 @@ print(tabelle.sorted)
 # Nehmen Sie das erste Element aus dem obigen Ergebnis, um den Modalwert zu
 # bekommen:
 modus <- (tabelle.sorted[1])
-print(modus)
 
 # Verständisfrage: gibt es immer nur *einen* Modalwert? 
 # Wenn nicht, ist der Code oben korrekt? Warum?
@@ -132,7 +123,7 @@ print(modus)
 # Bei 2 Elementen mit dem gleichen Wert, kann allerdings keine derartige Reihenfolge gemacht
 # werden.
 
-# Als Abschied ein Beispiel mit der Darstellung Frequenzdaten mit Säulendiagramm
+# Als Abscheid ein Beispiel mit der Darstellung Frequenzdaten mit Säulendiagramm
 # bzw. Histogramm
 
 library(ggplot2)
