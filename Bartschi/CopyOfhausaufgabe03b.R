@@ -14,7 +14,7 @@
 # In R können wir den arithmetischen Mittelwert sehr leicht mit mean()
 my.data <- c(1,9,7,3)
 print(mean(my.data))
-[1] 5
+[1] 5 
 
 # Führen Sie das Skript mit dem "Source"-Knopf aus. Bemerken Sie dabei, dass wir
 # hier print() nutzen müssen, damit das Ergebnis gedruck wird. Das ist anders als 
