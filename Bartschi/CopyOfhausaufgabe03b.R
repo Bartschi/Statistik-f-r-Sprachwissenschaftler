@@ -1,7 +1,9 @@
 # Hausaufgabe 03
 # Isabelle Bartsch <bartschi@students.uni-marburg.de>
-# 2014-04-26
+# 2014-04-28
 # Dieses Werk ist lizenziert unter einer CC-BY-NC-SA Lizenz.
+#Lizenz
+Diese Datei darf nur Prüfungszwecken dienen
 
 # Sie sollten die Datei auch in Ihren Ordner kopieren und einen Commit machen, 
 # bevor Sie die Kopie weiter anpassen! Vergessen Sie dabei nicht, Namen, Datum
