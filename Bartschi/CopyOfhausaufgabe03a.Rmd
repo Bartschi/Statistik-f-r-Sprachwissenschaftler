@@ -2,6 +2,9 @@
 % Isabelle Bartsch <bartschi@students.uni-marburg.de>
 % 2014-04-26
 
+# Lizenz
+Diese Datei darf nur Prüfungszwecken dienen
+
 Falls die Umlaute in dieser und anderen Dateien nicht korrekt dargestellt werden, sollten Sie File > Reopen with Encoding > UTF-8 sofort machen (und auf jeden Fall ohne davor zu speichern), damit die Enkodierung korrekt erkannt wird! 
 
 # Setup und ein bisschen Übung mit Git 
