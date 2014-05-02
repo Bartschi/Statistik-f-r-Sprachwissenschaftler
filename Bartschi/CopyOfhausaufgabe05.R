@@ -114,7 +114,7 @@ print(frauen.studiengang.dichte)
 klinisch <- frauen[frauen$major == "M.A..Klinische.Linguistik",]
 print(klinisch)
 
-# Das sieht erstmal sehr vervwirrend aus, ist es aber nicht. Die eckigen
+# Das sieht erstmal sehr verwirrend aus, ist es aber nicht. Die eckigen
 # Klammern bestimmen die Auswahl an Elementen. Wir haben das ja bei Indizen in
 # Vektoren schon gesehen. Man kann eigentlich Indizen oder logische
 # Einschränkungen nutzen, und das gleiche gilt für Data Frames. Bei Data Frames
@@ -129,15 +129,25 @@ print(klinisch)
 # Linguistik Kognition und Kommunikation und Speech Science
 # HINT: wie sehen die Namen aus bzw. wie werden sie im data frame buchstabiert?
 linkk <- frauen[frauen$major == "M.A..Linguistik.Kognition.und.Kommunikation",]
+print(linkk)
 speech <- frauen[frauen$major == "M.A..Speech.Science",] 
+print(speech)
 
 # Berechnen Sie -- ohne Hilfe von sd() -- die Standardabweichung für die Größe der drei 
 # Gruppen. Sie können auch weitere Zeilen hinzufügen, wenn es Ihnen so leichter
 # ist. 
 # HINT: Formel und Beispiel für die Berechnung auf den Folien!
-klinisch.sd <- sqrt( var(frauen$major== "M.A..Klinische.Linguistik",))
-linkk.sd <- sqrt( var(frauen$major== "M.A..Linguistik.Kognition.und.Kommunikation",))
-speech.sd <- sqrt( var(frauen$major== "M.A..Speech.Science",))
+klinisch.var<- var(klinisch$height)
+klinisch.sd <- sqrt(klinisch.var) 
+print(klinisch.sd)
+
+linkk.var <- var(linkk$height)
+linkk.sd <- sqrt(linkk.var)
+print(linkk.sd)
+
+speech.var <- var(speech$height)
+speech.sd <- sqrt(speech.var)
+print(speech.sd)
 
 # Berichten Sie jetzt die Mittelwerte und Standardabweichungen für die drei Gruppen. Die erste Gruppe steht hier als Muster:
 print( paste("Studiengang: Klinische Linguistik","Mean:",mean(klinisch$height),"SD:",klinisch.sd) )
