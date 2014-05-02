@@ -88,7 +88,7 @@ frauen <- subset(dat, sex=="f")
 #sollten Sie die Plots so machen, damit man einen Vergleich zwischen den Gruppen
 #ziehen kann. Dafür gibt es verschiedene Möglichkeiten; die Wahl bleibt Ihnen
 #überlassen. 
-frauen.studiengang.bw <- ggplot(data=dat,aes(x=major)) + geom_boxplot(aes(x=major, y= height), alpha=0.5)
+frauen.studiengang.bw <- ggplot(data=dat,aes(x=major)) + geom_boxplot(aes(x=major, y= height), alpha= 0.5)
 print(frauen.studiengang.bw)
 
 # Sehen die Studiengänge anders aus? Wir müssen hier noch relativ vorsichtig
@@ -97,7 +97,7 @@ print(frauen.studiengang.bw)
 # (Keine explizite Antwort nötig, nur eine Überlegung.)
 
 # Wir können natürlich auch die Dichte anschauen:
-frauen.studiengang.dichte <- ggplot(data=dat,aes(x=major)) + geom_density(aes(color=height,fill=height))
+frauen.studiengang.dichte <- ggplot(data=dat,aes(x=major)) + geom_density(aes(color="height",fill="height"), alpha=0.5)
 print(frauen.studiengang.dichte)
 
 # Haben Sie den gleichen Eindruck wie bei Box-Whisker bekommen? Unterscheiden
