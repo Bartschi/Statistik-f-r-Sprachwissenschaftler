@@ -75,8 +75,7 @@ pnorm(5,mean=mu,sd=3)
 Wenn wir das für alle drei Gruppen wiederholen möchten, ist es ziemlich ärgerlich, wenn wir jede Gruppe einzeln eingeben müssen. Dafür können wir eine **`for`-Schleife** nutzen:
 
 ```{r}
-for(s in c(3,4,5) ){
-  durchfall <- pnorm(5,mean=mu,sd=s)
+for(s in c(3,4,5) ){durchfall <- pnorm(5,mean=mu,sd=s)
   output <- paste("Bei einer Standabweichung von",s, "fallen",durchfall*100,"% durch.")
   print(output)
 }
@@ -84,10 +83,14 @@ for(s in c(3,4,5) ){
 
 Aber wir hoffen alle, dass wir doch eine gute Note bekommen. Fügen Sie einen Code-Block hier ein, der das gleiche aber mit "ausgezeichneten" Noten (=1 bzw. >= 13) macht. (Bei evtl. Copy-Paste nicht vergessen, "fallen...durch" durch etwas Passendes zu ersetzen!)  
 
-code_block_hier
-
-Wie steht die Anzahl guter Noten in Beziehung zur Anzahl schlechter Noten? 
-
+```{r}
+for(s in c(13,14,15)){
+  bestnoten <- pnorm(15, mean=mu, sd=s, lower.tail=FALSE)
+  output <- paste ("Bei einer Standabweichung von",s, "werden", bestnoten*100,"%  mit sehr gut bestehen.")
+  print(output)
+}
+```
+Wie steht die Anzahl guter Noten in Beziehung zur Anzahl schlechter Noten?
 antwort_hier
 
 Warum?
