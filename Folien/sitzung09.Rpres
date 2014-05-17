@@ -5,7 +5,7 @@ date: 2014-05-13
 autosize: false
 
 ```{r setup, include=FALSE}
-<<<<<<< HEAD
+<<<<< HEAD
 =======
 library(knitr)
 >>>>>>> 2d35a226033d802734551a5f346bca9d24ad9652
