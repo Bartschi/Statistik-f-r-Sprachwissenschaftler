@@ -73,14 +73,14 @@ print(var.test(rt$RT~rt$subj))
 
 # Sind die Varianzen homogen? Vergessen Sie nicht, dass die Nullhypothese beim
 # F-Test "Varianzen Ungleich" ist.
-Da der p-Wert 0,04 beträgt, sind die Varianzen homogen.
+#Da der p-Wert 0,04 beträgt, sind die Varianzen homogen.
 
 # Berechenen Sie den Levene Test:
 print(leveneTest(rt$RT~rt$subj))
 
 # Sind die Varianzen homogen? Vergessen Sie nicht, dass die Nullhypothese beim
 # Levene Test "Varianzen Gleich" ist.
-Die Varianzen sind homogen, da der P-Wert 0,36 beträgt
+#Die Varianzen sind homogen, da der P-Wert 0,36 beträgt
 
 # Für heterogene Varianzen haben wir eine Variante des  t-Tests gesehen, die
 # eine Korrektur der Freiheitsgerade macht. Bei homogener Varianz sollten beide
