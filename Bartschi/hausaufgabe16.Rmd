@@ -50,6 +50,69 @@ Mögliche Ausgangsfragen sind unter anderem:
 Sie können sich auch [das *ggplot* Buch](http://dx.doi.org/10.1007/978-0-387-98141-3) zur Inspiration anschauen, v.a. Abbildungen 4.7, 4.8, 4.9, 5.2, 5.3, 5.4, 5.6, 5.14, 7.16, 9.1  und Kapitel 2.2-2.5 könnten inspirierend wirken. Den Code zur Erstellung der Figuren findet man immer im Haupttext.
 
 **Originale Fragestellungen und Auswertungen werden mit Bonuspunkten belohnt!** 
+Gibt es einen Einfluss von Tiefe und Farbe oder Cut auf den Preis? Ist der Einfluss der Tiefe oder von der Farbe oder des Cuts auf den Preis höher? Inwieweit gibt es einen Zusammenspiel zwischen Tiefe und Farbe bzw. Tiefe und Cut auf den Preis?
+
+```{r}
+ggplot(diamonds, aes(x=z, y=price))+geom_point()
+ggplot(diamonds, aes(x=color, y=price))+geom_point()
+ggplot(diamonds, aes(x=cut, y=price))+geom_point()
+ggplot(diamonds, aes(x=z, y=price, color=color))+ geom_point()
+ggplot(diamonds, aes(x=z, y=price, color=cut))+ geom_point()
+ggplot(diamonds, aes(x=z, y=price, color=color))+ geom_point()+facet_wrap(~color)
+ggplot(diamonds, aes(x=z, y=price, color=cut))+ geom_point()+facet_wrap(~color)
+```
+
+Lineare Regression
+Einfluss von Tiefe auf den Preis?
+```{r}
+lm1 <- lm(price~z* color, data=diamonds)
+summary(lm1)
+
+lm2 <- lm(price~z* cut, data=diamonds)
+summary (lm2)
+
+```
+
+Einfluss von Farbe auf den Preis?
+
+```{r}
+diamonds$color1 <- as.numeric(diamonds$color)
+summary(lm(price~color1, data= diamonds))
+```
+
+Einfluss von Cut auf den Preis?
+```{r}
+diamonds$cut1 <- as.numeric(diamonds$cut)
+summary(lm(price~cut1, data= diamonds))
+```
+
+
+ANOVA Analyse
+
+```{r}
+ANOVA.Tiefe <-aov(price ~ z, data=diamonds)
+ANOVA.Farbe <-aov(price ~ color, data = diamonds)
+ANOVA.Cut <- aov(price ~ cut, data = diamonds)
+summary(ANOVA.Tiefe)
+summary(ANOVA.Farbe)
+ANOVA.Tiefe
+ANOVA.Farbe
+ANOVA.Cut
+```
+
+Zusammenspiel von Tiefe/Farbe auf den Preis
+```{r}
+ANOVA.TF<- aov(price~z*color, data = diamonds)
+summary(ANOVA.TF)
+```
+
+Zusammenspiel von Tiefe/Cut auf den Preis
+
+```{r}
+ANOVA.TC<- aov(price~z*cut, data = diamonds)
+summary(ANOVA.TC)
+```
+
 
 Hier ein paar Grafiken (auch im Buch zu finden):
 ```{r}
