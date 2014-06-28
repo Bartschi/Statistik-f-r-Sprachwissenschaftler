@@ -14,6 +14,10 @@ packages.used <- c("knitr","knitcitations"
                    ,"ez"
                    ,"faraway"
                    ,"lme4"
+<<<<<<< HEAD
+=======
+                   ,"effects"
+>>>>>>> 71a12d0098c3c3347721b9158fb912c1c232f5ec
                    )
 
 install.packages(packages.used,dependencies = TRUE)
