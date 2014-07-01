@@ -171,12 +171,14 @@ Woche | Datum          | Themen
 |      |                | *Hausaufgabe bis 30.06.2014 12 Uhr:*
 |      |                | 1. `hausaufgabe20.Rmd`
 | 12.  | **30.06.2014** | $\chi^2$-Test, logLikelihood & Likelihood-Ratio, McNemar-Test
-|      | **01.07.2014** | Mosaic Plots, Odds Ratio, Mann-Whitney U-Test, Wilcoxon Test
-| 13.  | **07.07.2014** | Experimentaldesign I
+|      | **01.07.2014** | $\chi^2$-Test, logLikelihood & Likelihood-Ratio, McNemar-Test, Mosaic Plots, Odds Ratio
+| 13.  | **07.07.2014** | Verweis auf nicht behandelte Methoden,^[jenseits] Experimentaldesign I
 |      | **08.07.2014** | Experimentaldesign II, Effektgröße und Power
 | 14.  | **14.07.2014** | Fragestunde / Puffer
 |      | **15.07.2014** | Klausur
 >>>>>>> dc0daed959e599346ae31770f7e14433e01164c4
+
+[^jenseits]: Mann-Whitney U-Test & Wilcoxon Test für Ordinaldaten, andere nicht parametrische Verfahren, Resampling-Methoden, Robust-Methoden, Link-Funktionen in GLM, GAM, andere Regressionsverfahren, MANOVA, Bayes'sche Varianten aller Verfahren, Bayes' Factors 
 
 # Software
 - [R](http://cran.r-project.org/)
