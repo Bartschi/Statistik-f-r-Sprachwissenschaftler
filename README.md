@@ -172,11 +172,19 @@ Woche | Datum          | Themen
 |      |                | 1. `hausaufgabe20.Rmd`
 | 12.  | **30.06.2014** | $\chi^2$-Test, logLikelihood & Likelihood-Ratio, McNemar-Test
 |      | **01.07.2014** | $\chi^2$-Test, logLikelihood & Likelihood-Ratio, McNemar-Test, Mosaic Plots, Odds Ratio
+<<<<<<< HEAD
+=======
+|      |                | *Hausaufgabe (wird nicht kontrolliert!)*
+|      |                | 1. Kapitel 18 bis auf 18.7 (loglinear analysis) aus *Discovering Statistics Using R* lesen
+|      |                | 2. Tests selber üben -- mit den Daten in *DSUR* oder weiterhin mit dem Titanic-Datensatz
+>>>>>>> a50a6ff260f105c3dcb547539a92907299f615e0
 | 13.  | **07.07.2014** | Verweis auf nicht behandelte Methoden,^[jenseits] Experimentaldesign I
 |      | **08.07.2014** | Experimentaldesign II, Effektgröße und Power
 | 14.  | **14.07.2014** | Fragestunde / Puffer
 |      | **15.07.2014** | Klausur
 >>>>>>> dc0daed959e599346ae31770f7e14433e01164c4
+
+[^jenseits]: Mann-Whitney U-Test & Wilcoxon Test für Ordinaldaten, andere nicht parametrische Verfahren, Resampling-Methoden, Robust-Methoden, Link-Funktionen in GLM, GAM, andere Regressionsverfahren, MANOVA, Bayes'sche Varianten aller Verfahren, Bayes' Factors 
 
 [^jenseits]: Mann-Whitney U-Test & Wilcoxon Test für Ordinaldaten, andere nicht parametrische Verfahren, Resampling-Methoden, Robust-Methoden, Link-Funktionen in GLM, GAM, andere Regressionsverfahren, MANOVA, Bayes'sche Varianten aller Verfahren, Bayes' Factors 
 
@@ -188,15 +196,21 @@ Woche | Datum          | Themen
 # Bibliografie
 Baayen, R. Harald (2008): Analyzing Linguistic Data: A Practical Introduction to Statistics Using R. Cambridge University Press.
 
+Bortz, Jürgen und Schuster (2010) [Statistik für Human- und Sozialwissenschaftler](http://link.springer.com/book/10.1007/978-3-642-12770-0). Springer Verlag.
+
 Eid, Gollwitzer und Schmitt (2010): Statistik und Forschungsmethoden. Beltz Verlag.
 
 [Field, A.](http://www.statisticshell.com/), Miles, J., & Field, Z. (2012): Discovering Statistics Using R. Sage Publications.
 
 Luhmann, M. (2010): R für Einsteiger. Einführung in die Statistiksoftware für die Sozialwissenschaften. Beltz Verlag.
 
-Wickham, Hadley (2009): ggplot2. Springer.
+Wickham, Hadley (2009): [ggplot2](http://link.springer.com/book/10.1007%2F978-0-387-98141-3). Springer.
 
-Die Reihe *Use R!* von Springer ist **kostenlos** über das Uni-Netz elektronisch verfügbar!  
+Wilcox, Rand R. (2010): [Fundamentals of Modern Statistical Methods](http://link.springer.com/book/10.1007/978-1-4419-5525-8). Springer Verlag.
+
+Wilcox, Rand R. (2012): [Introduction to Robust Estimation and Hypothesis Testing](http://www.sciencedirect.com/science/book/9780123869838). Academic Press.
+
+Die Reihe *Use R!* von Springer sowie auch Bortz und Schuster und die zwei Bücher von Wilcox sind **kostenlos** über das Uni-Netz elektronisch verfügbar! 
 
 # Linksammlung
 
@@ -247,6 +261,7 @@ Die Reihe *Use R!* von Springer ist **kostenlos** über das Uni-Netz elektronisc
     - [Ken Rice presents a unifying approach to statistical inference and hypothesis testing](http://andrewgelman.com/2014/04/29/ken-rice-presents-unifying-approach-statistical-inference-hypothesis-testing/)
 
 ## Andere Perspektive und Interessantes zur Statistik
+* [Verstehen Ärzte Testergebnisse?](http://www.bbc.com/news/magazine-28166019)
 * [Famous statistician quotes](http://stats.stackexchange.com/questions/726/famous-statistician-quotes)
 * [Common statistical sins](http://stats.stackexchange.com/questions/4551/what-are-common-statistical-sins)
 * [Modes, Medians and Means: A Unifying Perspective](http://www.johnmyleswhite.com/notebook/2013/03/22/modes-medians-and-means-an-unifying-perspective/)
